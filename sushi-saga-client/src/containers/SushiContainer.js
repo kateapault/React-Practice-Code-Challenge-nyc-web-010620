@@ -26,18 +26,23 @@ class SushiContainer extends React.Component {
     })
   }
 
+  onClickHandler = () => {
+    let newInd = this.state.startInd + 4
+    this.setState({startInd: newInd})
+    console.log(`NEW START IND IS: ${this.state.startInd}`)
+  }
+
 
   render() {
     return (
       <Fragment>
         <div className="belt">
-            {console.log(this.state.sushis)}
 
             {this.state.sushis[this.state.startInd]}
             {this.state.sushis[this.state.startInd + 1]}
             {this.state.sushis[this.state.startInd + 2]}
             {this.state.sushis[this.state.startInd + 3]}
-          <MoreButton />
+          <MoreButton onClickHandler={this.onClickHandler}/>
         </div>
       </Fragment>
     )

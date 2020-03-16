@@ -33,10 +33,10 @@ class SushiContainer extends React.Component {
         <div className="belt">
             {console.log(this.state.sushis)}
 
-            {this.state.sushis[0]}
-            {this.state.sushis[1]}
-            {this.state.sushis[2]}
-            {this.state.sushis[3]}
+            {this.state.sushis[this.state.startInd]}
+            {this.state.sushis[this.state.startInd + 1]}
+            {this.state.sushis[this.state.startInd + 2]}
+            {this.state.sushis[this.state.startInd + 3]}
           <MoreButton />
         </div>
       </Fragment>

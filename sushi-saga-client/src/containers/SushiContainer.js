@@ -1,19 +1,23 @@
 import React, { Fragment } from 'react'
 import MoreButton from '../components/MoreButton'
+const SUSHISURL = 'http://localhost:3000/sushis'
 
-const SushiContainer = (props) => {
-  return (
-    <Fragment>
-      <div className="belt">
-        {
-          /* 
-             Render Sushi components here!
-          */
-        }
-        <MoreButton />
-      </div>
-    </Fragment>
-  )
+
+class SushiContainer extends React.Component {
+
+
+  render() {
+    return (
+      <Fragment>
+        <div className="belt">
+
+        
+
+          <MoreButton />
+        </div>
+      </Fragment>
+    )
+  }
 }
 
 export default SushiContainer

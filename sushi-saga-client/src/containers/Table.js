@@ -1,20 +1,7 @@
 import React, { Fragment } from 'react'
 
 const Table = (props) => {
-
   
-  sushis = () => {
-    fetch(SUSHISURL)
-    .then(response => response.json())
-    .then(sushisJSON => {
-      let sushisArr = sushisJSON.map(sushi => {
-        return (sushi)
-      });
-      console.log(sushisArr)
-      return sushisArr
-    }
-  }
-
   const renderPlates = (array) => {
     return array.map((x, index) => {
       return <div className="empty-plate" style={{ top: -7 * index }}/>

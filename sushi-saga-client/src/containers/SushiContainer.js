@@ -19,7 +19,7 @@ class SushiContainer extends React.Component {
     .then(sushisJSON => {
       let sushisArr = sushisJSON.map(sushi => {
         return (
-          <Sushi name={sushi.name} img_url={sushi.img_url} price={sushi.price}/>
+          <Sushi name={sushi.name} img_url={sushi.img_url} price={sushi.price} onClickSubtract={this.props.onClickSubtract}/>
         )
       })
       this.setState({sushis: sushisArr})

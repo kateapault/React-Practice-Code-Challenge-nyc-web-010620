@@ -1,12 +1,6 @@
 import React, { Fragment } from 'react'
 
 class Table extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cashMoney: 1000
-    };
-  };
 
   renderPlates = (array) => {
     return array.map((x, index) => {
@@ -17,7 +11,7 @@ class Table extends React.Component {
     return (
       <Fragment>
         <h1 className="remaining">
-          You have: ${this.state.cashMoney} remaining!
+          You have: ${this.props.cashMoney} remaining!
         </h1>
         <div className="table">
           <div className="stack">
